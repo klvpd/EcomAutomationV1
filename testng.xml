@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite parallel="false" name="Suite">
+	<!-- <parameter name="browser" value="firefox" /> -->
+	<listeners>
+		<listener class-name="com.ecom.util.Reporter"></listener>
+	</listeners>
+
+	<!-- Browser properties for firefox browser = firefox browser.driver = webdriver.gecko.driver 
+		browser.driverpath = ./Drivers\\geckodriver.exe -->
+
+	<!-- Browser properties for IE browser = ie browser.driver = webdriver.ie.driver 
+		browser.driverpath = ./Drivers\\IEDriverServer.exe -->
+
+	<!-- Browser properties for chrome. To be used after browser is installed. 
+		browser = chrome browser.driver = webdriver.chrome.driver browser.driverpath 
+		= ./Drivers\\chromedriver.exe -->
+
+	<!-- Browser properties for edge browser = edge browser.driver = webdriver.edge.driver 
+		browser.driverpath = ./Drivers\\msedgedriver.exe -->
+
+	<test name="Positive Testcases">
+		<parameter name="browser" value="edge" />
+		<parameter name="webdriver" value="webdriver.edge.driver" />
+		<parameter name="driverpath"
+			value="./Drivers\\msedgedriver.exe" />
+		<classes>
+			<class name="com.ecom.testcases.TC_LoginTest_001"></class>
+			<!-- <class name="com.ecom.testcases.TC_LoginTest_003"></class> -->
+		</classes>
+	</test>
+
+	<test name="Negative Testcases">
+		<parameter name="browser" value="firefox" />
+		<parameter name="webdriver" value="webdriver.gecko.driver" />
+		<parameter name="driverpath"
+			value="./Drivers\\geckodriver.exe" />
+		<classes>
+			<class name="com.ecom.testcases.TC_LoginTest_002"></class>
+		</classes>
+	</test>
+
+	<!-- <test name="Link Validation">
+		<parameter name="browser" value="edge" />
+		<parameter name="webdriver" value="webdriver.edge.driver" />
+		<parameter name="driverpath"
+			value="./Drivers\\msedgedriver.exe" />
+		<classes>
+			<class name="com.ecom.testcases.TC_LoginTest_001"></class>
+			<class name="com.ecom.testcases.TC_HomePageLinkValidation_004"></class>
+		</classes>
+	</test> -->
+</suite> <!-- Suite -->
