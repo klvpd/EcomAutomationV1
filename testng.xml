@@ -21,9 +21,9 @@
 
 	<test name="Positive Testcases">
 		<parameter name="browser" value="ie" />
-		<parameter name="webdriver" value="webdriver.ie.driver" />
+		<parameter name="webdriver" value="webdriver.edge.driver" />
 		<parameter name="driverpath"
-			value="./Drivers\\IEDriverServer.exe" />
+			value="./Drivers\\msedgedriver.exe" />
 		<classes>
 			<class name="com.ecom.testcases.TC_LoginTest_001"></class>
 			<!-- <class name="com.ecom.testcases.TC_LoginTest_003"></class> -->
